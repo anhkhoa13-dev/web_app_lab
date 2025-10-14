@@ -1,0 +1,34 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.border{
+    border: 1px solid gray;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1;
+}
+
+.left-sidebar{
+    flex: 0 0 250px; 
+}
+
+.main-container{
+    flex: 1;  
+}
+
+.right-sidebar{
+    flex: 0 0 250px; 
+}
+
+
