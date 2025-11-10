@@ -1,0 +1,7 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "[jsp]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": null
+    }
+}
