@@ -11,6 +11,7 @@
                     <c:otherwise>Add New Student</c:otherwise>
                 </c:choose>
             </title>
+
             <style>
                 body {
                     font-family: Arial, sans-serif;
@@ -69,12 +70,12 @@
                     border-radius: 5px;
                 }
 
-                .error {
-                    background-color: #f8d7da;
-                    color: #721c24;
-                    padding: 10px;
-                    border-radius: 5px;
-                    margin-bottom: 20px;
+                /* REQUIRED BY EXERCISE */
+                .field-error {
+                    color: red;
+                    font-size: 14px;
+                    display: block;
+                    margin-top: 6px;
                 }
             </style>
         </head>
@@ -86,6 +87,7 @@
                     <c:if test="${student == null}">➕ Add New Student</c:if>
                 </h2>
 
+                <!-- Global error -->
                 <c:if test="${not empty param.error}">
                     <div class="error">${param.error}</div>
                 </c:if>
@@ -97,25 +99,45 @@
                         <input type="hidden" name="id" value="${student.id}">
                     </c:if>
 
+                    <!-- STUDENT CODE -->
                     <div class="form-group">
                         <label>Student Code:</label>
                         <input type="text" name="studentCode" value="${student.studentCode}" ${student !=null
-                            ? 'readonly' : 'required' }>
+                            ? 'readonly' : '' }>
+
+                        <c:if test="${not empty errorCode}">
+                            <span class="field-error">${errorCode}</span>
+                        </c:if>
                     </div>
 
+                    <!-- FULL NAME -->
                     <div class="form-group">
                         <label>Full Name:</label>
-                        <input type="text" name="fullName" value="${student.fullName}" required>
+                        <input type="text" name="fullName" value="${student.fullName}">
+
+                        <c:if test="${not empty errorName}">
+                            <span class="field-error">${errorName}</span>
+                        </c:if>
                     </div>
 
+                    <!-- EMAIL -->
                     <div class="form-group">
                         <label>Email:</label>
                         <input type="email" name="email" value="${student.email}">
+
+                        <c:if test="${not empty errorEmail}">
+                            <span class="field-error">${errorEmail}</span>
+                        </c:if>
                     </div>
 
+                    <!-- MAJOR -->
                     <div class="form-group">
                         <label>Major:</label>
                         <input type="text" name="major" value="${student.major}">
+
+                        <c:if test="${not empty errorMajor}">
+                            <span class="field-error">${errorMajor}</span>
+                        </c:if>
                     </div>
 
                     <button type="submit" class="btn-submit">
@@ -123,6 +145,7 @@
                         <c:if test="${student == null}">💾 Save</c:if>
                     </button>
                     <a href="student?action=list" class="btn-cancel">Cancel</a>
+
                 </form>
             </div>
         </body>
