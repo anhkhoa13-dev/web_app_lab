@@ -34,13 +34,16 @@
                 .navbar-right {
                     display: flex;
                     align-items: center;
-                    gap: 20px;
+                    gap: 15px;
+                    /* Tăng khoảng cách giữa các phần tử */
                 }
 
                 .user-info {
                     display: flex;
                     align-items: center;
                     gap: 10px;
+                    margin-right: 15px;
+                    /* Tách biệt phần user info với các nút */
                 }
 
                 .role-badge {
@@ -58,6 +61,7 @@
                     background: #3498db;
                 }
 
+                /* Style cho nút Logout */
                 .btn-logout {
                     padding: 8px 20px;
                     background: #e74c3c;
@@ -71,6 +75,24 @@
                 .btn-logout:hover {
                     background: #c0392b;
                 }
+
+                /* --- MỚI: Style cho nút Change Password trên Navbar --- */
+                .btn-change-pass {
+                    padding: 8px 15px;
+                    background: #95a5a6;
+                    /* Màu xám trung tính */
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    transition: background 0.3s;
+                }
+
+                .btn-change-pass:hover {
+                    background: #7f8c8d;
+                }
+
+                /* ----------------------------------------------------- */
 
                 .container {
                     max-width: 1200px;
@@ -167,7 +189,6 @@
                 }
 
                 .action-btn:hover {
-                    background: #2980b9;
                     transform: translateY(-2px);
                 }
 
@@ -175,12 +196,34 @@
                     background: #3498db;
                 }
 
+                .action-btn-primary:hover {
+                    background: #2980b9;
+                }
+
                 .action-btn-success {
                     background: #27ae60;
                 }
 
+                .action-btn-success:hover {
+                    background: #219150;
+                }
+
                 .action-btn-warning {
                     background: #f39c12;
+                }
+
+                .action-btn-warning:hover {
+                    background: #d35400;
+                }
+
+                /* Mới: Style cho nút đổi mật khẩu trong grid */
+                .action-btn-info {
+                    background: #8e44ad;
+                    /* Màu tím */
+                }
+
+                .action-btn-info:hover {
+                    background: #732d91;
                 }
             </style>
         </head>
@@ -191,11 +234,15 @@
                 <h2>📚 Student Management System</h2>
                 <div class="navbar-right">
                     <div class="user-info">
-                        <span>${sessionScope.fullName}</span>
+                        <span>Hello, ${sessionScope.fullName}</span>
                         <span class="role-badge role-${sessionScope.role}">
                             ${sessionScope.role}
                         </span>
                     </div>
+
+                    <!-- Link Change Password trên Navbar -->
+                    <a href="change-password" class="btn-change-pass">Change Password</a>
+
                     <a href="logout" class="btn-logout">Logout</a>
                 </div>
             </div>
@@ -237,6 +284,11 @@
 
                         <a href="student?action=search" class="action-btn action-btn-warning">
                             🔍 Search Students
+                        </a>
+
+                        <!-- Link Change Password trong Grid Actions -->
+                        <a href="change-password" class="action-btn action-btn-info">
+                            🔐 Change Password
                         </a>
                     </div>
                 </div>

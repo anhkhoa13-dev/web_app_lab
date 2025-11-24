@@ -1,10 +1,13 @@
-D:\IU\Web_App\lab\web_app_lab\lab5&6\student_management\src\main\java\filter\AuthFilter.java
-D:\IU\Web_App\lab\web_app_lab\lab5&6\student_management\src\main\java\model\Student.java
+D:\IU\Web_App\lab\web_app_lab\lab5&6\student_management\src\main\java\controller\ChangePasswordController.java
 D:\IU\Web_App\lab\web_app_lab\lab5&6\student_management\src\main\java\model\User.java
 D:\IU\Web_App\lab\web_app_lab\lab5&6\student_management\src\main\java\dao\UserDAO.java
+D:\IU\Web_App\lab\web_app_lab\lab5&6\student_management\src\main\java\filter\AdminFilter.java
+D:\IU\Web_App\lab\web_app_lab\lab5&6\student_management\src\main\java\util\PasswordHashGenerator.java
+D:\IU\Web_App\lab\web_app_lab\lab5&6\student_management\src\main\java\filter\AuthFilter.java
+D:\IU\Web_App\lab\web_app_lab\lab5&6\student_management\src\main\java\model\Student.java
 D:\IU\Web_App\lab\web_app_lab\lab5&6\student_management\src\main\java\controller\LoginController.java
 D:\IU\Web_App\lab\web_app_lab\lab5&6\student_management\src\main\java\controller\LogoutController.java
 D:\IU\Web_App\lab\web_app_lab\lab5&6\student_management\src\main\java\controller\StudentController.java
 D:\IU\Web_App\lab\web_app_lab\lab5&6\student_management\src\main\java\dao\StudentDAO.java
-D:\IU\Web_App\lab\web_app_lab\lab5&6\student_management\src\main\java\filter\AdminFilter.java
 D:\IU\Web_App\lab\web_app_lab\lab5&6\student_management\src\main\java\controller\DashboardController.java
+D:\IU\Web_App\lab\web_app_lab\lab5&6\student_management\src\main\java\util\UserDAOTesting.java
